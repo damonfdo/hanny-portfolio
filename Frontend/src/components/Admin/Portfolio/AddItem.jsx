@@ -54,7 +54,7 @@ const AddItem = () => {
                 </Form.Group>
                 <Form.Group className='mb-3' controlId='formItemImage'>
                     <Form.Label> Image</Form.Label>
-                    <Form.Control name='image' type='file' accept="image/png" onChange={handleFile} />
+                    <Form.Control name='image' type='file' accept="image/png, image/jpeg" onChange={handleFile} />
                 </Form.Group>
                 <Button variant='primary' type='submit'>Submit</Button>
             </Form>

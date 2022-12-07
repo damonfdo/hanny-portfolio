@@ -1,6 +1,7 @@
 import axios from 'axios';
 
-const token = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Imhhbm55IiwiaWF0IjoxNjY5OTE2Mzc0fQ.VKCkcLK9jRquZotVYZgnRBZDsi-6m-t7k0wwtfBN1ww';
+const token = localStorage.getItem('user');
+
 
 export default axios.create({
     baseURL: 'http://localhost:3000',

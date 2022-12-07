@@ -47,9 +47,10 @@ function App() {
           } />
           {/* Protected Routes  */}
           <Route path='/app' element={<Login />} />
+
           <Route path='/app/dashboard' element={<Dashboard data={data} />} />
           <Route path='/app/add' element={<AddItem />} />
-          <Route path='/app/edit/:id' element={<EditItem />} />
+          {/* <Route path='/app/edit/:id' element={<EditItem />} /> */}
         </Routes>
 
       </div>

@@ -17,7 +17,7 @@ var upload = multer({
     })
 });
 
-router.get('/', get);
+router.get('/', isLoggedIn, get);
 router.get('/:id', isLoggedIn, getOne);
 router.post('/', isLoggedIn, upload.single('image'), create);
 router.delete('/:id', isLoggedIn, deleteItem);

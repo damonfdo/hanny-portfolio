@@ -1,29 +1,38 @@
 import React, { useState } from 'react';
+import { useContext } from 'react';
 import { Container, Form, Button } from 'react-bootstrap';
 import { useNavigate } from 'react-router';
+import AuthContext from '../../Context/AuthProvider.jsx';
 import axios from '../../lib/axios.js';
 
 const LOGIN_URL = '/user/login';
 
 const Login = () => {
     const navigate = useNavigate();
-
+    const { setAuth } = useContext(AuthContext);
     const [input, setInput] = useState({
         username: '',
         password: ''
     });
 
+
+    const [error, setError] = useState('');
+
     const handleSubmit = async (event) => {
         event.preventDefault();
 
         try {
+            setError(false);
             const res = await axios.post(LOGIN_URL, input);
 
             const token = res.data;
-            console.log(token);
+            // setAuth({ token });
+            // console.log(setAuth);
+            localStorage.setItem('user', token);
+
             navigate('/app/dashboard');
         } catch (error) {
-
+            setError(error.message);
         }
 
     };
@@ -41,7 +50,7 @@ const Login = () => {
     };
     return (
         <div>
-            <Container>
+            <Container className='w-50 mt-5 login'>
                 <Form onSubmit={handleSubmit}>
                     <Form.Group className="mb-3" controlId="formBasicEmail">
                         <Form.Label>Username</Form.Label>
@@ -71,6 +80,11 @@ const Login = () => {
                         Submit
                     </Button>
                 </Form>
+                <div>
+                    {error && (
+                        <p>You are not authorized</p>
+                    )}
+                </div>
             </Container>
         </div>
     );

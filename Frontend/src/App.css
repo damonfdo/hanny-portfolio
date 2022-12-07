@@ -706,3 +706,22 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   text-align: center;
   font-size: 1em !important;
 }
+
+/************  Dashboard  ************/
+.login {
+  border: 1px solid grey;
+  border-radius: 25px;
+  padding: 4em;
+
+  box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
+}
+.title {
+  font-size: 1em;
+  font-weight: 600;
+}
+
+.dashboard-item img {
+  height: 148px;
+  aspect-ratio: 1/1;
+  object-fit: contain;
+}
