@@ -9,7 +9,7 @@ WORKDIR /usr/src/app
 COPY package*.json ./
 
 # Copy Env file  
-COPY ../.env ./
+COPY .env ./
 
 # NPM INSTALL 
 RUN npm ci --only=production
