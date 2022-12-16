@@ -15,33 +15,45 @@ const MySkills = () => {
                     </div>
                 </div>
                 <div className='row'>
-                    <div className='container col-12'>
+                    <div className='container col-12 d-flex justify-content-center'>
                         <ul className='skill-img'>
                             <li>
                                 {/* <img src={LogoDesign} /> */}
+                                {/* <img src='./LOGO-DESIGN.webp' /> */}
+                                <img src='./insta.webp' />
                                 <h3> Logo Design</h3>
                             </li>
                             <li>
                                 {/* <img src={Typography} /> */}
+                                {/* <img src='./Typography.webp' /> */}
+                                <img src='./insta.webp' />
                                 <h3> Typography</h3>
                             </li>
                             <li>
                                 {/* <img src={Packaging} /> */}
+                                {/* <img src='./Packaging.webp' /> */}
+                                <img src='./insta.webp' />
                                 <h3> Packaging</h3>
                             </li>
-                        </ul>
-                        <ul className='skill-img'>
+                            {/* </ul>
+                        <ul className='skill-img'> */}
                             <li>
                                 {/* <img src={Branding} /> */}
+                                {/* <img src='./Branding.webp' /> */}
+                                <img src='./insta.webp' />
                                 <h3> Branding</h3>
                             </li>
                             <li>
                                 {/* <img src={Illustration} /> */}
+                                {/* <img src='./Illustration.webp' /> */}
+                                <img src='./insta.webp' />
                                 <h3> Illustration </h3>
                             </li>
                             <li>
                                 {/* <img src={MotionGraphic} /> */}
-                                <h3> Motion Graphic</h3>
+                                {/* <img src='./MOTION-GRAPHIC.webp' /> */}
+                                <img src='./insta.webp' />
+                                <h3> Motion <br /> Graphic</h3>
                             </li>
 
                         </ul>

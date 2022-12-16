@@ -394,10 +394,15 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   list-style-type: none;
   justify-content: space-around;
   flex-wrap: wrap;
+  max-width: 600px;
   overflow: hidden;
 }
 .skill ul li {
+  display: flex;
   text-align: center;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
 }
 .skill ul li h3 {
   text-align: center;
@@ -699,8 +704,9 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   list-style-type: none !important;
 }
 .skill-img li img {
-  width: 48px;
-  height: 48px;
+  height: 148px;
+  aspect-ratio: 1/1;
+  object-fit: contain;
 }
 .figure-caption {
   text-align: center;

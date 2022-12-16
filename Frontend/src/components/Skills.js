@@ -1,8 +1,8 @@
-import React from 'react'
+import React from 'react';
 import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
-import colorSharp from "../assets/img/color-sharp.png"
-import { Typography, Branding, Illustration, LogoDesign, MotionGraphic, Packaging } from '../assets/img/index.js'
+import colorSharp from "../assets/img/color-sharp.png";
+import { Typography, Branding, Illustration, LogoDesign, MotionGraphic, Packaging } from '../assets/img/index.js';
 
 export const Skills = () => {
   const responsive = {
@@ -44,27 +44,27 @@ export const Skills = () => {
                 pauseOnHover
                 className="owl-carousel owl-theme skill-slider">
                 <div className="item">
-                  <img src={LogoDesign} alt="Logo Design" />
+                  <img src='./insta.webp' alt="Logo Design" />
                   <h5>Logo Design</h5>
                 </div>
                 <div className="item">
-                  <img src={Typography} alt="Typography" />
+                  <img src='./insta.webp' alt="Typography" />
                   <h5>Typography</h5>
                 </div>
                 <div className="item">
-                  <img src={Packaging} alt="Packaging" />
+                  <img src='./insta.webp' alt="Packaging" />
                   <h5>Packaging</h5>
                 </div>
                 <div className="item">
-                  <img src={Branding} alt="Branding" />
+                  <img src='./insta.webp' alt="Branding" />
                   <h5>Branding</h5>
                 </div>
                 <div className="item">
-                  <img src={Illustration} alt="Illustration" />
+                  <img src='./insta.webp' alt="Illustration" />
                   <h5>Illustration</h5>
                 </div>
                 <div className="item">
-                  <img src={MotionGraphic} alt="Motion Graphic" />
+                  <img src='./insta.webp' alt="Motion Graphic" />
                   <h5>Motion Graphic</h5>
                 </div>
               </Carousel>
@@ -74,5 +74,5 @@ export const Skills = () => {
       </div>
       <img className="background-image-left" src={colorSharp} alt="background" />
     </section>
-  )
-}
+  );
+};
