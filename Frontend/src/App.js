@@ -27,8 +27,8 @@ function App() {
     await setData(res.data);
   };
   useEffect(() => { getData(); }, [data]);
-
-
+  console.log('data is being logged');
+  console.log(data);
   return (
     <BrowserRouter>
       <div className="App">

@@ -29,7 +29,8 @@ export const Projects = ({ data }) => {
                           // <LazyLoad height={762}>
                           <ProjectCard
                             key={index}
-                            imgUrl={`http://localhost:3000/${data.image}`}
+                            // imgUrl={`http://localhost:3000/${data.image}`}
+                            imgUrl={`http://api:3000/${data.image}`}
                           />
                           // </LazyLoad>
 
