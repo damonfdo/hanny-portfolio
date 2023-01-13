@@ -15,6 +15,7 @@ const isUserExists = async (username) => {
 
 //Login
 export const login = async (req, res) => {
+
     const { username, password } = req.body;
 
     if (!username || !password) {
@@ -24,16 +25,18 @@ export const login = async (req, res) => {
 
         const user = await isUserExists(username);
 
+
         if (!user) {
 
             return res.status(403).json({ message: 'You are unauthorized from accessing the plattform' });
         }
 
+
         // Check Password 
-
         const match = await bcrypt.compare(password[0], user.password);
-        if (!match) {
 
+
+        if (!match) {
             return res.status(400).json({ message: 'Username or Passowrd incorrect' });
         } else {
 
@@ -42,7 +45,6 @@ export const login = async (req, res) => {
         }
     } catch (error) {
         return res.status(400).json({ message: error.message });
-
     }
 
 };

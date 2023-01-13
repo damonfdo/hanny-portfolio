@@ -28,6 +28,7 @@ const Login = () => {
             const token = res.data;
             // setAuth({ token });
             // console.log(setAuth);
+            console.log(token);
             localStorage.setItem('user', token);
 
             navigate('/app/dashboard');
@@ -48,6 +49,7 @@ const Login = () => {
     const resetForm = () => {
         setInput({ username: '', password: '' });
     };
+    // console.log(error);
     return (
         <div>
             <Container className='w-50 mt-5 login'>
