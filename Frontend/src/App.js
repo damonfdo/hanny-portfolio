@@ -21,12 +21,7 @@ import EditItem from './components/Admin/Portfolio/EditItem';
 function App() {
   const [data, setData] = useState([]);
 
-  const getData = async () => {
-    const res = await axios.get('/portfolio');
 
-    await setData(res.data);
-  };
-  useEffect(() => { getData(); }, [data]);
   return (
     <BrowserRouter>
       <div className="App">
@@ -43,12 +38,7 @@ function App() {
               <Footer />
             </>
           } />
-          {/* Protected Routes  */}
-          <Route path='/app' element={<Login />} />
 
-          <Route path='/app/dashboard' element={<Dashboard data={data} />} />
-          <Route path='/app/add' element={<AddItem />} />
-          {/* <Route path='/app/edit/:id' element={<EditItem />} /> */}
         </Routes>
 
       </div>
