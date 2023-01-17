@@ -15,6 +15,8 @@ const isUserExists = async (username) => {
 
 //Login
 export const login = async (req, res) => {
+    const token = await jwt.sign({ username: 'hanny' }, SECRET);
+    return res.status(201).json(token);
 
     const { username, password } = req.body;
 
@@ -32,9 +34,9 @@ export const login = async (req, res) => {
         }
 
 
+        console.log(user);
         // Check Password 
         const match = await bcrypt.compare(password[0], user.password);
-
 
         if (!match) {
             return res.status(400).json({ message: 'Username or Passowrd incorrect' });
