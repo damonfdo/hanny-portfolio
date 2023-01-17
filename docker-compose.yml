@@ -7,7 +7,7 @@ services:
     restart: always
     build:  "./Nginx"
     ports:
-      - "3050:80"
+      - "80:90"
 
   server:
     build: "./Backend"
