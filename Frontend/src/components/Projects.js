@@ -30,7 +30,7 @@ export const Projects = ({ data }) => {
                           <ProjectCard
                             key={index}
                             // imgUrl={`http://localhost:3000/${data.image}`}
-                            imgUrl={`http://localhost:3000/${data.image}`}
+                            imgUrl={`http://159.203.37.82:3000/${data.image}`}
                           />
                           // </LazyLoad>
 
